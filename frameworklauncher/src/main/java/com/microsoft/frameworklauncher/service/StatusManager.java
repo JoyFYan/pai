@@ -109,6 +109,8 @@ public class StatusManager extends AbstractService {  // THREAD SAFE
     LauncherStatus launcherStatus = new LauncherStatus();
     launcherStatus.setLauncherConfiguration(conf);
     launcherStatus.setLoggedInUser(loggedInUser);
+    launcherStatus.setHadoopLibrarySupportsGpu(ResourceDescriptor.checkHadoopLibrarySupportsGpu());
+    launcherStatus.setHadoopLibrarySupportsPort(ResourceDescriptor.checkHadoopLibrarySupportsPort());
     updateLauncherStatus(launcherStatus);
 
     // Recover AllFrameworkStatuses from ZK and clean the corrupted AggregatedFrameworkStatus

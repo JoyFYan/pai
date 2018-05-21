@@ -22,6 +22,8 @@ import java.io.Serializable;
 public class LauncherStatus implements Serializable {
   private LauncherConfiguration launcherConfiguration;
   private UserDescriptor loggedInUser;
+  private Boolean hadoopLibrarySupportsGpu;
+  private Boolean hadoopLibrarySupportsPort;
 
   public LauncherConfiguration getLauncherConfiguration() {
     return launcherConfiguration;
@@ -37,5 +39,21 @@ public class LauncherStatus implements Serializable {
 
   public void setLoggedInUser(UserDescriptor loggedInUser) {
     this.loggedInUser = loggedInUser;
+  }
+
+  public Boolean getHadoopLibrarySupportsGpu() {
+    return hadoopLibrarySupportsGpu;
+  }
+
+  public void setHadoopLibrarySupportsGpu(Boolean hadoopLibrarySupportsGpu) {
+    this.hadoopLibrarySupportsGpu = hadoopLibrarySupportsGpu;
+  }
+
+  public Boolean getHadoopLibrarySupportsPort() {
+    return hadoopLibrarySupportsPort;
+  }
+
+  public void setHadoopLibrarySupportsPort(Boolean hadoopLibrarySupportsPort) {
+    this.hadoopLibrarySupportsPort = hadoopLibrarySupportsPort;
   }
 }
